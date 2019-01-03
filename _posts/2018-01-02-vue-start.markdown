@@ -1,0 +1,77 @@
+---
+layout: post
+title: vue 시작해보기
+data: 2018-01-02
+description: 
+img: vue_logo.jpeg
+tags: [vue]
+author: Do Young An
+---
+
+# Vue란?
+-------------------------------------------------------------------------------------------------------
+## [2018 자바스크립트 동향](https://2018.stateofjs.com)
+
+<img src="./../assets/img/2018_front_end_chart.png" />
+#### 해당 차트를 보면 많은 사람들이 뷰를 써보고 또 배우고 싶다는 비율이 높다는 것을 알 수 있다.<br/>
+#### 물론 아직 리엑트가 많은 사용자와 커뮤니티를 가지고 있고 2019년도에도 그 유세를 이어 갈 것으로 보입니다.<br/>
+#### 하지만 Vue.js도 쉬운 러닝커브로 많은 사람들이 관심을 가지고 있고 또 사용하고 있습니다.
+
+## 소개
+<img src="./../assets/img/mvvm-of-vue.png" />
+#### PWA(Progressive Web App)기반 SPA(Single Page Application)을 제작하기 위한 웹 프론트엔드 라이브러리이다. 그중에서 MVVM 패턴의 ViewModal 레이어에 해당하는 View단 라이브러리이다. Vue를 구성하는 주요 요소로는 Component, Router, Resource, Template등이 있다.
+
+- 물론 정의를 찾아보면 많은 개념들을 공부해야 되지만 한번 뷰를 체험 해보는게 가장 큰 공부가 아닐까 싶다.
+
+# 맛보기
+-------------------------------------------------------------------------------------------------------
+* 스크립트 삽입하기
+
+``` html
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+```
+
+* 뷰 객체 만들기
+
+``` html
+<div id="app">{% raw %}
+    {{ message }}{% endraw %}
+</div>
+<script>
+var app = new Vue({
+    el: '#app',
+    data: {
+        message: 'Vue를 체험해봤어요.'
+    }
+});
+</script>
+```
+
+* 최종 html 파일
+
+``` html
+<html>
+<head></head>
+<body>
+    <div id="app">{% raw %}
+        {{ message }}{% endraw %}
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            message: 'Vue를 체험해봤어요.'
+        }
+    });
+    </script>
+</body>
+</html>
+```
+
+* 결과
+
+<img src="./../assets/img/vue_start.png" />
+
+- div 태그 안의 message 가 'Vue를 체험해봤어요.' 로 바뀐것을 확인해 볼 수 있다.
+- 단지 html에 스크립트 한줄을 추가하고 뷰 객체를 생성하는 것 만으로도 당신은 뷰를 사용할 수 있다. 얼마나 매력적이지 않은가
