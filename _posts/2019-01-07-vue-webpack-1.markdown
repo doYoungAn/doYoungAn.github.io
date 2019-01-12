@@ -217,7 +217,7 @@ import Vue from 'vue';
 ``` html
 <!-- 컴포넌트의 html -->
 <template>
-    <div class="sample">
+    <div>
         vue webpack project
     </div>
 </template>
@@ -228,11 +228,7 @@ export default {}
 </script>
 
 <!-- 컴포넌트의 css -->
-<style>
-.sample {
-    color: green;
-}
-</style>
+<style></style>
 ```
 
 2. index.js
