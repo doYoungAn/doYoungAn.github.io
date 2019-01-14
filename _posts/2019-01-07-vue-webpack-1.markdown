@@ -121,7 +121,7 @@ npm install -D vue-loader vue-style-loader css-loader
 
 4. webpack-plugin
 ``` bash
-npm install -D html-webpack-plugin
+npm install -D html-webpack-plugin copy-webpack-plugin
 ```
 
 5. compiler
