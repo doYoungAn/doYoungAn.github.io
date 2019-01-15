@@ -1,10 +1,10 @@
 ---
 layout: post
 title: vue, webpack 프로젝트 생성기 2
-data: 2018-01-03
+data: 2019-01-03
 description: 
 img: vue_logo.jpeg
-tags: [vue]
+tags: [vue, webpack]
 author: Do Young An
 ---
 

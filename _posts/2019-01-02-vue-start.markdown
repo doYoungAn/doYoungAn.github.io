@@ -1,7 +1,7 @@
 ---
 layout: post
 title: vue 시작해보기
-data: 2018-01-02
+data: 2019-01-02
 description: 
 img: vue_logo.jpeg
 tags: [vue]

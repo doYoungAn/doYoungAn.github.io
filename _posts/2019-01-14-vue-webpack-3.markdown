@@ -1,10 +1,10 @@
 ---
 layout: post
 title: vue, webpack 프로젝트 생성기 3
-data: 2018-01-14
+data: 2019-01-14
 description: 
 img: vue_logo.jpeg
-tags: [vue]
+tags: [vue, webpack]
 author: Do Young An
 ---
 
@@ -133,4 +133,21 @@ module.exports = merge(baseConfig, {
     ]
 });
 ```
+
+## 13. npm script 수정하기
+--------------------------------------------------------
+webpack은 기본값으로 webpack.config.js파일을 읽습니다.  
+하지만 webpack.config.js는 지워지고  
+webpack.config.base.js, webpack.config.dev.js, webpack.config.prod.js 세개의 파일이 생겼습니다.  
+해당 파일을 읽을 수 있게 npm 스크립트를 수정합니다.
+
+``` json
+package.json
+"script": {
+    "dev": "webpack-dev-server --config webpack.config.dev.js",
+    "build": "webpack --config webpack.config.prod.js"
+}
+```
+
+--config 옵션으로 해당 설정파일을 넣어줍니다.
 
