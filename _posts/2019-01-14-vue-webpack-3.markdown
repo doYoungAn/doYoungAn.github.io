@@ -3,7 +3,7 @@ layout: post
 title: vue, webpack 프로젝트 생성기 3
 data: 2019-01-14
 description: 
-img: vue_logo.jpeg
+img: ./vue-webpack-2/logo.jpeg
 tags: [vue, webpack]
 author: Do Young An
 ---

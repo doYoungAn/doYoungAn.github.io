@@ -3,7 +3,7 @@ layout: post
 title: vue, webpack 프로젝트 생성기 1
 data: 2019-01-03
 description: 
-img: vue_logo.jpeg
+img: ./vue-webpack-1/logo.jpeg
 tags: [vue, webpack]
 author: Do Young An
 ---
@@ -38,19 +38,19 @@ vue --version
 ``` bash
 vue create hello-world
 ```
-<img src="./../assets/img/complete-vue-cli.png" />
+<img src="./../assets/img/vue-webpack-1/complete-vue-cli.png" />
 <br/>
 설치가 끝나고 명령어가 나오네요 한번 해봅시다.
-<img src="./../assets/img/vue-cli-serve.png" />
+<img src="./../assets/img/vue-webpack-1/vue-cli-serve.png" />
 <br/>
 무언가 작업이 끝나고 http://localhost:8080 으로 동작하는걸 알 수 있습니다.
-<img src="./../assets/img/vue-cli-host.png" />
+<img src="./../assets/img/vue-webpack-1/vue-cli-host.png" />
 <br/>
 해당 주소로 들어가니 vue 프로젝트가 실행중이네요. 완전 편하게 프로젝트를 생성했습니다.
 4. 프로젝트 구성 살펴보기
 <br/>
-<img src="./../assets/img/vue-cli-files.png" width="200" />
-<img src="./../assets/img/vue-cli-dist.png" width="200" />
+<img src="./../assets/img/vue-webpack-1/vue-cli-files.png" width="200" />
+<img src="./../assets/img/vue-webpack-1/vue-cli-dist.png" width="200" />
 <br/>
 왼쪽의 이미지에서는 프로젝트의 파일들을 볼 수 있고 오른쪽 이미지에서는 실제 빌드된 파일들을 볼 수 있습니다.
 js 파일이 없었는데 생겨버렸네요. 이는 빌드할때 vue파일을 읽어서 js를 만들어 줍니다. cli에서 알아서 하게 설정이 되어있습니다.
@@ -306,7 +306,7 @@ dist 폴더안에 index.html 파일을 만듭니다.
 ```
 
 index.html 파일을 실행합니다.
-<img src="./../assets/img/vue-webpack-first.png" />
+<img src="./../assets/img/vue-webpack-1/vue-webpack-first.png" />
 
 - index.html 안의 <div id="app"> 이라는 태그가 사라지고 App.vue의 내용으로 바뀌었습니다.
 

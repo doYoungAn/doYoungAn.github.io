@@ -3,7 +3,7 @@ layout: post
 title: 앵귤러 src 파일 트리 구조
 date: 2017-10-15
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
-img: angular2-logo.jpg # Add image post (optional)
+img: ./angular2-src-file-tree/logo.jpg # Add image post (optional)
 tags: [Angular2]
 author: An Do Young # Add name author (optional)
 ---
@@ -11,7 +11,7 @@ author: An Do Young # Add name author (optional)
 # 앵귤러 src 파일 트리 구조
 ---
 ## 기본적인 angular cli 로 생성한 앵귤러 프로젝트
-<img src="./../assets/img/angular-trees/angular-src-file-tree.png">
+<img src="./../assets/img/angular2-src-file-tree/angular-src-file-tree.png">
 
 ### app 폴더
 1. app.component.css 파일
@@ -66,13 +66,13 @@ export class AppModule { }
     - 비슷한 파일로는 .gitignore 파일이 있다.
     - example
         - 앵귤러 프로젝트에서 폴더를 생성한다.
-        - <img src="./../assets/img/angular-trees/angular-add-folder.png">
+        - <img src="./../assets/img/angular2-src-file-tree/angular-add-folder.png">
         - git status 명령으로 트래킹을한다.
-        - <img src="./../assets/img/angular-trees/angular-git-status-no-change.png">
+        - <img src="./../assets/img/angular2-src-file-tree/angular-git-status-no-change.png">
         - 폴더 안에 .gitKeep 파일을 생성한다.
-        - <img src="./../assets/img/angular-trees/angular-add-folder-gitkeep.png">
+        - <img src="./../assets/img/angular2-src-file-tree/angular-add-folder-gitkeep.png">
         - git status 명령으로 트래킹을 한다.
-        - <img src="./../assets/img/angular-trees/angular-git-status-change.png">
+        - <img src="./../assets/img/angular2-src-file-tree/angular-git-status-change.png">
 2. 해당 프로젝트에서 필요한 이미지 파일 등이 들어간다.
 
 ### environments 폴더
