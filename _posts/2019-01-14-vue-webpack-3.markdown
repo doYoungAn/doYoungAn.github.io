@@ -3,7 +3,7 @@ layout: post
 title: vue, webpack 프로젝트 생성기 3
 data: 2019-01-14
 description: 
-img: vue_logo.jpeg
+img: ./vue-webpack-2/logo.jpeg
 tags: [vue, webpack]
 author: Do Young An
 ---
@@ -134,6 +134,17 @@ module.exports = merge(baseConfig, {
 });
 ```
 
+이제 3개의 웹팩 설정파일이 생겼습니다.
+만약 공통으로 쓰이는 설정이라면 `webpack.config.base`를 수정하면 됩니다.  
+development에서 쓰이는 설정이라면 `webpack.config.dev`를 수정하면 됩니다.  
+production에서 쓰이는 설정이라면 `webpack.config.prod`를 수정하면 됩니다.
+
+플러그인들의 자세한 옵션을 확인하려면  
+[webpack-dev-server](https://webpack.js.org/configuration/dev-server/)
+[webpack-merge](https://github.com/survivejs/webpack-merge)
+[html-webpack-plugin](https://github.com/jantimon/html-webpack-plugin)
+해당 사이트를 방문해주세요.
+
 ## 13. npm script 수정하기
 --------------------------------------------------------
 webpack은 기본값으로 webpack.config.js파일을 읽습니다.  
@@ -151,3 +162,98 @@ package.json
 
 --config 옵션으로 해당 설정파일을 넣어줍니다.
 
+## 14. 폰트 혹은 svg 파일
+---
+웹 프로젝트를 할때는 이미지도 필요하지만 폰트나 svg 파일을 사용할때가 있습니다.  
+이때 사용하는 것이 `url-loader`입니다.
+
+``` javascript
+webpack.config.base.js
+...
+    rules: [
+        ...
+            {
+                test: /\.(woff|woff2|eot|ttf|svg)(\?[a-z0-9=.]+)?$/,
+                loader: 'url-loader',
+                options: {
+                limit: 100000,
+                name: '[name].[ext]',
+                outputPath: '/assets/fonts'
+                }
+            }
+        ...
+    ]
+...
+```
+
+
+## 15. dist 폴더
+---
+빌드할때마다 dist 폴더안에 js, css, html 등의 파일들이 생성됩니다.  
+코드를 고치고 빌드하면 이전 버전의 dist는 필요 없어질 수 있습니다.  
+이를 위해 사용하는 것이 `clean-webpack-plugin`입니다.
+
+``` javascript
+webpack.config.base.js
+...
+    plugins: [
+        ...
+            /*
+             * webpack.config.base.js 가 실행할때마다 dist 폴더를 삭제합니다.
+             * 해당 설정을 dev, prod 가 공유함으로 dev, prod 모두 할때마다 dist 폴더가 삭제됩니다.
+            */
+            new ClearWebpackPlugin(['dist'], {
+                root: process.cwd(),
+                verbose: true,
+                dry: false
+            })
+        ...
+    ]
+...
+```
+
+## 16. router 사용하기
+---
+이제 webpack에 대한 설정은 거의 끝났습니다.
+Vue는 SPA(single page application)이므로 하나의 index.html을 갖습니다.
+기본적인 라우팅의 이동은 주소를 이동하면서 해당 주소에 있는 파일을 보여주게 됩니다.
+Vue에서 라우팅을 사용하려면 `vue-router`가 필요합니다.
+
+- ./src/router.js
+
+``` javascript
+import Vue from 'vue';
+import Router from 'vue-router';
+
+Vue.use(Router);
+
+const router = new Router({
+    mode: 'history',
+    routes: [
+        // 프로젝트에서 사용하는 라우트등이 등록됩니다.
+    ]
+});
+
+export default router;
+```
+
+- ./src/main.js
+
+``` javascript
+import router from './router';
+
+new Vue({
+    router,
+    el: '#app'
+})
+```
+
+## 17. 마무리
+---
+이제 기본적은 vue 프로젝트 보일러 플레이트가 완료되었습니다.
+vue에 대한 내용보단 webpack에 대한 내용이 더 많았습니다.
+vue-cli로 프로젝트를 구성하는 것보단 하나씩 해보는 것이
+뷰가 어떻게 컴파일 되고 어떤 파일들이 들어가는지 확실히 알 수 있습니다.
+개발할때 큰 장점이 됩니다. 개발자가 커스텀을 할 수 있는 부분이 많아지죠
+
+샘플 프로젝트는 [vue-webpack]() 을 참조하세요.
