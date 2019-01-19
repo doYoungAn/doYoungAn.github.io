@@ -69,6 +69,7 @@ module.exports = {
 `development`에서 사용되는 설정 값들이 있습니다.
 
 ``` javascript
+const webpack = require('webpack');
 const merge = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const baseConfig = require('./webpack.config.base');
@@ -89,6 +90,8 @@ module.exports = merge(baseConfig, {
         publicPath: '/'
     },
     plugins: [
+        // 핫 리로딩을 해주는 플러그인입니다.
+        new webpack.HotModuleReplacementPlugin(),
         new HtmlWebpackPlugin({
             template: './public/index.html'
         })
@@ -256,4 +259,4 @@ vue-cli로 프로젝트를 구성하는 것보단 하나씩 해보는 것이
 뷰가 어떻게 컴파일 되고 어떤 파일들이 들어가는지 확실히 알 수 있습니다.
 개발할때 큰 장점이 됩니다. 개발자가 커스텀을 할 수 있는 부분이 많아지죠
 
-샘플 프로젝트는 [vue-webpack]() 을 참조하세요.
+샘플 프로젝트는 [vue-webpack](https://github.com/doYoungAn/vue-webpack-1) 을 참조하세요.

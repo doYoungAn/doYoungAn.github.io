@@ -203,6 +203,6 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 수정이 끝나면 `npm run build`를 실행합니다.  
 빌드가 끝나면 dist폴더안에 assets폴더가 있는 걸 확인할 수 있습니다.  
-이미지 들은 `<img src="/assets/hello.png" alt="" />` 이런 형식으로 불러올 수 있습니다.
+이미지 들은 `<img src="/assets/img/hello.png" alt="" />` 이런 형식으로 불러올 수 있습니다.
 
 ## 이로써 기본적인 Vue에 스타일과 이미지까지 적용시켰습니다.
