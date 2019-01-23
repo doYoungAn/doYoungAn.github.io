@@ -1,6 +1,6 @@
 ---
 layout: post
-title: typescript와 친해지기 1
+title: 타입스크립트와 친해지기
 data: 2019-01-16
 description: 타입스크립트의 정의를 알아봅니다.
 img: ./play-typescript-1/logo.jpg
@@ -27,8 +27,18 @@ es5, es6는 ECMAScript5,6 을 뜻하고 있습니다. 간단하게 자바스크�
 이를 토대로 생각해보면 1가지 결론을 생각할 수 있습니다.  
 현재 쓰는 자바스크립트 그대로 타입스크립트를 사용할 수 있습니다. 타입스크립트가 상위집합이니깐요.  
 
-## 2. 타입스크립트의 발전
+## 2. 타입스크립트의 근황
 ---
+
+타입스크립트는 Turbo Pascal, Delphi, 그리고 C#의 핵심 개발자인 Microsoft 직원 Anders Hejlsberg의 리드 하에 개발되었고, 2년간의 내부 개발을 거쳐 2012년 10월 1일 공개되었다.  
+처음에는 그닥 주목받지 못하고 있다가 `AngularJS`가 `Angaulr2`(지금은 통상 Angular)로 넘어가면서 타입스크립트를 기본 언어로 채택하면서  
+급속하게 발전하기 시작했습니다.  
+
+<img src="./../assets/img/play-typescript-1/typescript-trend.png" />
+
+타입스크립트가 발전하면서 SPA의 삼대장인 `react` `vue` `angular` 모두 타입스크립트를 쓸 수 있게 지원합니다.  
+또한 `node`도 타입스크립트를 쓸 수 있으며  `express` 도 마찬가지 입니다. 
+
 
 ## 3. 타입스크립트의 유용한 점
 ---
