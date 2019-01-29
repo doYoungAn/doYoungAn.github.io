@@ -93,23 +93,141 @@ var helloTxt = "Hello, I am " + name + ", My hoddy is " + hoddy + ", i am " + ag
 
 ## Number
 ---
+숫자를 의미합니다.  이진수, 8진수, 10진수, 16진수 모두 number 타입으로 정의합니다.
+
+``` typescript
+let year: number = 2019;
+let age: number = 20;
+let decimal: number = 6;
+let hex: number = 0xf00d;
+let binary: number = 0b1010;
+let octal: number = 0o744;
+```
+<br/>
+``` javascript
+var year = 2019;
+var age = 20;
+var decimal = 6;
+var hex = 0xf00d;
+var binary = 10;
+var octal = 484;
+```
 
 ## Boolean
 ---
+true 혹은 false 값을 가집니다.
+
+``` typescript
+let isDone: boolean = false;
+let isFinished: boolean = true;
+````
+<br/>
+
+``` javascript
+var isDone = false;
+var isFinished = true;
+```
 
 ## Array
 ---
+배열을 의미합니다. 다른 타입을 원소로 가집니다.  
+배열을 표현하는 방법은 2가지가 있습니다.  
 
-## Object
----
+``` typescript
+let list: number[] = [1, 2, 3];
+let names: Array<string> = ['a', 'b', 'c'];
+```
+<br />
+``` javascript
+var list = [1, 2, 3];
+var names = ['a', 'b', 'c'];
+```
 
-## Function
+## Tuple
 ---
+배열에 여러 타입을 지정해줍니다.  
+파이썬의 튜플과는 달리 값은 자유롭게 변경 가능합니다.  
+``` typescript
+let x: [string, number];
+x = ["hey", 1];
+```
+<br/>
+``` javascript
+var x;
+x = ["hey", 1];
+```
+
+## Enum
+---
+C의 enum과 유사합니다.  
+값을 설정하지 않으면 0부터 시작합니다.
+``` typescript
+enum OS { window, mac, linux }
+let myCom: OS = OS.window;
+console.log(myCom);
+```
+<br/>
+``` javascript
+var OS;
+(function (OS) {
+    OS[OS["window"] = 0] = "window";
+    OS[OS["mac"] = 1] = "mac";
+    OS[OS["linux"] = 2] = "linux";
+})(OS || (OS = {}));
+var myCom = OS.window;
+console.log(myCom); // console log is 0
+```
+<br />
+enum은 설정한 변수들과 값들로 구성된 객체를 만듭니다.
+``` javascript
+{
+    '0': 'window',
+    '1': 'mac',
+    '2': 'linux',
+    window: 0,
+    mac: 1,
+    linux: 2
+}
+```
 
 ## Any
 ---
+모든 타입을 정의합니다.  
+한마디로 보면 타입스크립트에서 타입을 정해주지 않는 것입니다.  
+
+``` typescript
+let age: any = 20;
+let name: any = 'Do Young';
+let finished: any = false;
+let list: any = [1, 2, 3];
+// 어떤 타입의 원소를 가질 수 있는 배열입니다.
+let cars: any[] = [1, 'ford', false];
+```
+<br/>
+``` javascript
+var age = 20;
+var name = 'Do Young';
+var finished = false;
+var list = [1, 2, 3];
+var cars = [1, 'ford', false];
+```
 
 ## Void
 ---
+타입이 없는 상태입니다. 
+`any`와 반대되는 개념이며 주로 리턴이 없는 함수에 쓰입니다.  
+변수에 지정할 경우 undefined만을 가질 수 있습니다.
+
+``` typescript
+function warn(): void {
+    console.log('This is my warning message');
+}
+```
+<br />
+``` javascript
+function warn() {
+    console.log('This is my warning message');
+}
+```
 
 
