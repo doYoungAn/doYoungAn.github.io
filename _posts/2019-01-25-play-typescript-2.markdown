@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 타입스크립트에서 사용하는 기본타입
-data: 2019-01-16
+data: 2019-01-27
 description: 타입스크립트를 체험해봅니다.
 img: ./play-typescript-1/logo.jpg
 tags: [typescript]
