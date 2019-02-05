@@ -21,11 +21,14 @@ author: Do Young An
 
 # 프로젝트 요약
 ---
-1. 하나의 css 파일을 React, Vue, Angular가 공유합니다.
-2. JSON 배열을 GET으로 받아옵니다.
+<img src="./../assets/img/component-compare/preview-project.png" />
+
+1. 각각 줄마다 React, Vue, Angular를 사용합니다.
+2. 하나의 css 파일을 React, Vue, Angular가 공유합니다.
+3. JSON 배열을 GET으로 받아옵니다.
     - React, Vue 는 `axios`를 사용하고 Angular는 `@angular/http`를 사용합니다.
     - `axios`는 promise로 기반이고 `@angular/http`는 rxjs 기반입니다.
-3. 부모 컴포넌트에서 배열의 데이터를 표현하기 위해 자식 컴포넌트를 사용합니다.
+4. 부모 컴포넌트에서 배열의 데이터를 표현하기 위해 자식 컴포넌트를 사용합니다.
 
 * Promise와 rxjs에 대한 이해가 없더라고 이 포스트를 보는데 문제는 없습니다. 만약 더 알고 싶은 분은 [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise), [rxjs](http://reactivex.io/)를 참조하세요.
 
