@@ -76,7 +76,16 @@ export class AppModule { }
 2. 해당 프로젝트에서 필요한 이미지 파일 등이 들어간다.
 
 ### environments 폴더
+```typescript
+export const environment = {
+  production: true
+};
+```
+dev일때와 prod일때를 구분할때 쓰는 변수가 들어있습니다.
+
 ### favicon.icon 파일
+해당 프로젝트를 대표하는 아이콘이며 기본으로 앵귤러 마크로 되어있습니다.
+
 ### index.html 파일
 ``` html
 <!doctype html>
@@ -96,11 +105,20 @@ export class AppModule { }
 ```
 싱글 애플리케이션이 가지고 있는 단하나의 index.html 파일이다. angular를 통해 만든 컴포넌트 들은 결국 `<app-root></app-root>`태그가 변회하여 보여진다.
 ### main.ts 파일
+``` typescript
+platformBrowserDynamic().bootstrapModule(AppModule)
+  .catch(err => console.error(err));
+```
 웹팩에 들어가는 엔트리 파일입니다.
 여기서 불려지는 루트 모듈인 app.module 가 들어가서 나머지 모듈이나 컴포넌트가 따라서 들어갑니다.
+AppModule을 부트스트랩 하면 루트 컴포넌트인 <app-root> 가 만들어집니다.
 
 ### polyfills.ts 파일
+``` typescript
+import 'zone.js/dist/zone';
+```
 폴리필에 대한 임폴트를 지원합니다.
+처음 프로젝트를 생성하면 zone.js가 기본적으로 임폴트 되어있습니다.
 
 ### styles.css 파일
 ``` css
@@ -108,11 +126,13 @@ export class AppModule { }
 ```
 해당 프로젝트의 글로벌 스타일 시트 파일이다. 다른 라이브러리의 스타일 시트를 import 하거나 자주 쓰이는 스타일들이 정의되는 파일이다.
 ### test.ts 파일
+cli로 만든 프로젝트는 기본적으로 자스민 테스트를 지원합니다.
+
 ### tsconfig.app.json 파일
 타입스크립트의 설정 파일입니다.
 
 ### tsconfig.spec.json 파일
 테스트할시 타입스크립트의 설정파일입니다.
 
-### typing.d.ts 파일
+
 
