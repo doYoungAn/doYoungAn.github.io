@@ -138,6 +138,8 @@ export const deleteUser = (context, index) => {
 
 ### 5. mutations
 스토어의 상태를 바꿉니다.
+간단한 값의 변경이라면 굳이 액션을 쓰지 말고 
+컴포넌트에서 직접 커밋을 부를 수 있습니다.
 
 ``` javascript
 export const increment = (state) => {
@@ -158,12 +160,39 @@ export const deleteUser = (state, index) => {
 }
 ```
 
+### 6. App.vue
+
+``` javascript
+App.vue
+...
+increment() {
+    this.$store.dispatch('increment');
+},
+decrement() {
+    this.$store.dispatch('decrement');
+},
+addUser() {
+    this.$store.dispatch('addUser', this.$data.user);
+    this.$data.user = '';
+},
+deleteUser(index) {
+    this.$store.dispatch('deleteUser', index);
+}
+...
+```
+example)
+1. (App.vue)        increment 라는 디스패치를 보냅니다.
+2. (actions.js)     increment 라는 액션이 실행합니다.
+3. (actions.js)     increment 액션 안에서 increment 커밋을 보냅니다. 
+4. (mutations.js)   뮤테이션 안에 있는 increment가 실행합니다.
+5. (index.js)       state.count에 1을 더합니다.
+
 # Angular
 ---
 ### 1. 폴더구조
 ``` bash
 |   app
-|    |  app.component.html
+|    |  app.component.html`
 |    |  app.component.ts
 |    |  app.module.ts
 |   store
