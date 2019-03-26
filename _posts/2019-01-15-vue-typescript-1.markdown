@@ -42,5 +42,12 @@ export default {
 script 부분에서 export default로 방출시켜서 다른 컴포넌트에서  
 import XXX from './..'; 이런 식으로 불러와 사용합니다. 
 
-## 타입스크립트로 작성
+## vue-class-component
 ---
+vue의 타입스크립트 공식 라이브러리입니다.  
+클래스 기반의 컴포넌트 작성을 도와줍니다.  
+자세한 내용은 [vue-class-component](https://www.npmjs.com/package/vue-class-component)를 참조하세요.  
+
+해당 포스트 작성 기준 트렌드를 살펴보면 많은 사람들이 사용 중인것을 볼 수 있습니다.
+
+<img src="./../assets/img/vue-typescript-1/trend.png" />
