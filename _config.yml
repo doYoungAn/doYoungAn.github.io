@@ -34,11 +34,12 @@ discus_identifier: mr-brown # Add your discus identifier
 analytics: # Google Analytics
 
 # Paginate
-paginate: 10
+paginate: 20
 paginate_path: /page:num/
 
 # Build settings
 markdown: kramdown
+plugins: [jekyll-paginate]
 gems:
   - jekyll-paginate
   - jekyll-feed
